@@ -15,8 +15,9 @@
     <a href="RRH.html">RRH</a>
     <a href="TANF.html">TANF</a>
     <a href="homearp.html">HomeArp</a>
-    <a href="Sucess.html">Housing Success Stories</a>
-    <a href="staffreferral.html"> Agency Staff or Community Member Referral Form</a>
+    <a href="Success.html">Housing Success Stories</a>
+    <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+      <a href="pointapt.html">Switchpoiont Redhills</a>
 </nav>
 
 <div class="container">
@@ -58,7 +59,6 @@
                 <input type="number" id="householdSize" name="householdSize" min="1" required />
             </div>
 
-      
             <h2>Eligibility Questions</h2>
 
             <div class="form-group">
@@ -95,14 +95,13 @@
                 </div>
             </div>
 
-            
             <h2>Housing Need</h2>
 
             <div class="form-group">
                 <label>What type of housing crisis are you experiencing? <span class="required">*</span></label>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="housingCrisis" value="Eviction Risk" /> At risk of eviction</label>
-                    <label><input type="checkbox" name="housingCrisis" value="Past Due Rent" /> Past‑due rent</label>
+                    <label><input type="checkbox" name="housingCrisis" value="Past Due Rent" /> Past-due rent</label>
                     <label><input type="checkbox" name="housingCrisis" value="Move-In Assistance Needed" /> Need help moving into housing</label>
                     <label><input type="checkbox" name="housingCrisis" value="Other" /> Other</label>
                 </div>
@@ -125,7 +124,7 @@
             </div>
 
             <div class="form-group">
-                <label for="evictionDate">If yes, eviction date:</label>
+                <label for="evictionDate">If yes, what is your eviction date?</label>
                 <input type="text" id="evictionDate" name="evictionDate">
             </div>
         
@@ -135,10 +134,10 @@
                 <label>What resources have you attempted to use? <span class="required">*</span></label>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="resourcesUsed" value="Family/Friends" /> Family/Friends</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Community Organizations" /> Community Organizations</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Faith-Based Organizations" /> Faith‑Based Organizations</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Government Programs" /> Government Programs</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Landlord Payment Plan" /> Payment Plan with Landlord</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Community Organizations" /> Community organizations</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Faith-Based Organizations" /> Faith-based organizations</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Government Programs" /> Government programs</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Landlord Payment Plan" /> Payment plan with landlord</label>
                     <label><input type="checkbox" name="resourcesUsed" value="None" /> None</label>
                 </div>
             </div>
@@ -156,7 +155,7 @@
             </div>
 
             <div class="form-group">
-                <label for="timeline">Estimated timeline to reach stability <span class="required">*</span></label>
+                <label for="timeline">Estimated timeline to reach housing stability <span class="required">*</span></label>
                 <select id="timeline" name="timeline" required>
                     <option value="">Select one</option>
                     <option value="1-3 months">1–3 months</option>
@@ -166,11 +165,10 @@
                 </select>
             </div>
 
-           
             <h2>Additional Information</h2>
 
             <div class="form-group">
-                <label for="additionalInfo">Anything else you’d like us to know?</label>
+                <label for="additionalInfo">Is there anything else you’d like us to know?</label>
                 <textarea id="additionalInfo" name="additionalInfo"></textarea>
             </div>
 
@@ -185,23 +183,21 @@
     </div>
 </div>
 
-
 <footer>
     <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="PSH.html">PSH</a>
-    <a href="RRH.html">RRH</a>
-    <a href="TANF.html">TANF</a>
-    <a href="homearp.html">HomeArp</a>
-    <a href="Sucess.html">Housing Success Stories</a>
-    <a href="staffreferral.html"> Agency Staff or Community Member Referral Form</a>
+        <a href="index.html">Home</a>
+        <a href="PSH.html">PSH</a>
+        <a href="RRH.html">RRH</a>
+        <a href="TANF.html">TANF</a>
+        <a href="homearp.html">HomeArp</a>
+        <a href="Success.html">Housing Success Stories</a>
+        <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+          <a href="pointapt.html">Switchpoiont Redhills</a>
     </div>
-
 
     <p>Equal Housing Opportunity • Switchpoint Community Resource Center</p>
     <p>© 2026 Switchpoint – Design by PattyJamesHDM</p>
 </footer>
-
 
 <script>
 document.getElementById('tanfForm').addEventListener('submit', function (e) {
@@ -245,6 +241,10 @@ HOUSING NEED
 Crisis Type: ${data.housingCrisis || "N/A"}
 Crisis Details:
 ${data.crisisDetails}
+
+EVICTION STATUS
+Facing Eviction: ${data.evictionRisk}
+Eviction Date: ${data.evictionDate || "N/A"}
 
 RESOURCES USED
 Resources Attempted: ${data.resourcesUsed || "None"}

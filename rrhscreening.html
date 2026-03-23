@@ -15,9 +15,11 @@
     <a href="RRH.html">RRH</a>
     <a href="TANF.html">TANF</a>
     <a href="homearp.html">HomeArp</a>
-    <a href="Sucess.html">Housing Success Stories</a>
-    <a href="staffreferral.html"> Agency Staff or Community Member Referral Form</a>
+    <a href="Success.html">Housing Success Stories</a>
+    <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+     <a href="pointapt.html">Switchpoiont Redhills</a>
 </nav>
+
 <div class="container">
     <div class="card">
 
@@ -40,7 +42,7 @@
 
             <div class="form-group">
                 <label for="email">Email Address <span class="required">*</span></label>
-                <input type="text" id="email" name="email" required />
+                <input type="email" id="email" name="email" required />
             </div>
 
             <div class="form-group">
@@ -66,17 +68,16 @@
             <h3>If yes, what best describes your current situation?</h3>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="homelessSituation" value="Shelter" /> Staying in a shelter</label>
-                <label><input type="checkbox" name="homelessSituation" value="Street" /> Living in a place not meant for habitation (car, street, camp)</label>
+                <label><input type="checkbox" name="homelessSituation" value="Street" /> Living in a place not meant for habitation (car, street, or camp)</label>
                 <label><input type="checkbox" name="homelessSituation" value="Domestic Violence" /> Fleeing domestic violence with no safe housing</label>
                 <label><input type="checkbox" name="homelessSituation" value="Other" /> Other</label>
             </div>
 
             <div class="form-group">
-                <label for="situationDetails">If “Other,” please describe:</label>
+                <label for="situationDetails">If "Other," please describe:</label>
                 <textarea id="situationDetails" name="situationDetails"></textarea>
             </div>
 
-         
             <h2>Income & Housing Information</h2>
 
             <div class="form-group">
@@ -89,22 +90,21 @@
                 <select id="employmentStatus" name="employmentStatus" required>
                     <option value="">Select one</option>
                     <option value="Employed">Employed</option>
-                    <option value="Seeking Employment">Seeking Employment</option>
+                    <option value="Seeking Employment">Seeking employment</option>
                     <option value="Unemployed">Unemployed</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="currentRent">Current or Expected Rent Amount</label>
+                <label for="currentRent">Current or expected rent amount</label>
                 <input type="number" id="currentRent" name="currentRent" min="0" step="0.01" />
             </div>
 
             <div class="form-group">
-                <label for="pastDueRent">Past-Due Rent (if applicable)</label>
+                <label for="pastDueRent">Past-due rent (if applicable)</label>
                 <input type="number" id="pastDueRent" name="pastDueRent" min="0" step="0.01" />
             </div>
 
-           
             <h2>Barriers & Resources</h2>
 
             <div class="form-group">
@@ -116,10 +116,10 @@
                 <label>What resources have you already attempted? <span class="required">*</span></label>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="resourcesUsed" value="Family/Friends" /> Family/Friends</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Community Programs" /> Community Programs</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Faith-Based Organizations" /> Faith-Based Organizations</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Government Benefits" /> Government Benefits</label>
-                    <label><input type="checkbox" name="resourcesUsed" value="Landlord Payment Plan" /> Payment Plan with Landlord</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Community Programs" /> Community programs</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Faith-Based Organizations" /> Faith-based organizations</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Government Benefits" /> Government benefits</label>
+                    <label><input type="checkbox" name="resourcesUsed" value="Landlord Payment Plan" /> Payment plan with landlord</label>
                     <label><input type="checkbox" name="resourcesUsed" value="None" /> None</label>
                 </div>
             </div>
@@ -129,7 +129,6 @@
                 <textarea id="resourceDetails" name="resourceDetails" required></textarea>
             </div>
 
-            
             <h2>Housing Stability Plan</h2>
 
             <div class="form-group">
@@ -158,23 +157,21 @@
     </div>
 </div>
 
-
 <footer>
- <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="PSH.html">PSH</a>
-    <a href="RRH.html">RRH</a>
-    <a href="TANF.html">TANF</a>
-    <a href="homearp.html">HomeArp</a>
-    <a href="Sucess.html">Housing Success Stories</a>
-    <a href="staffreferral.html"> Agency Staff or Community Member Referral Form</a>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="PSH.html">PSH</a>
+        <a href="RRH.html">RRH</a>
+        <a href="TANF.html">TANF</a>
+        <a href="homearp.html">HomeArp</a>
+        <a href="Success.html">Housing Success Stories</a>
+        <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+          <a href="pointapt.html">Switchpoiont Redhills</a>
     </div>
-
 
     <p>Equal Housing Opportunity • Switchpoint Community Resource Center</p>
     <p>© 2026 Switchpoint – Design by PattyJamesHDM</p>
 </footer>
-
 
 <script>
 document.getElementById('rrhForm').addEventListener('submit', function (e) {
@@ -205,20 +202,20 @@ Phone: ${data.phone}
 Household Size: ${data.householdSize}
 
 HOMELESSNESS STATUS
-Currently Homeless: ${data.currentlyHomeless}
+Currently homeless: ${data.currentlyHomeless}
 Situation: ${data.homelessSituation || "N/A"}
-Additional Details: ${data.situationDetails || "N/A"}
+Additional details: ${data.situationDetails || "N/A"}
 
 INCOME & HOUSING
-Monthly Income: $${data.monthlyIncome}
-Employment Status: ${data.employmentStatus}
-Current Rent: $${data.currentRent || "0"}
-Past-Due Rent: $${data.pastDueRent || "0"}
+Monthly income: $${data.monthlyIncome}
+Employment status: ${data.employmentStatus}
+Current rent: $${data.currentRent || "0"}
+Past-due rent: $${data.pastDueRent || "0"}
 
 BARRIERS & RESOURCES
 Barriers: ${data.barriers}
-Resources Attempted: ${data.resourcesUsed || "None"}
-Resource Outcomes: ${data.resourceDetails}
+Resources attempted: ${data.resourcesUsed || "None"}
+Resource outcomes: ${data.resourceDetails}
 
 HOUSING STABILITY PLAN
 Plan: ${data.stabilityPlan}

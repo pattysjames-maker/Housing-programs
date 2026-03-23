@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Candidate Referral Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="PSH.html">PSH</a>
+    <a href="RRH.html">RRH</a>
+    <a href="TANF.html">TANF</a>
+    <a href="homearp.html">HomeArp</a>
+    <a href="Success.html">Housing Success Stories</a>
+    <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+     <a href="pointapt.html">Switchpoiont Redhills</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+
+        <h>Switchpoint Redhills Referral </h1>
+
+        <p>
+              To be completed by Case managers and or community members when referring to the Housing Department for consideration for the candidate list for The Switchpoint Redhill's, for studio and 1-bedrooms opening end of May 2026.  
+            Candidates must be individuals. A Property Management Company will qualify all candidates; our role is to create a candidate list for their consideration/qualification.
+        </p>
+
+        <p><strong>CRITERIA:</strong><br>
+      Maximum of $21,150 annually
+        </p>
+
+        <form id="pointReferralForm">
+
+            <h2>Client Information</h2>
+
+            <div class="form-group">
+                <label for="clientName">Name <span class="required">*</span></label>
+                <input type="text" id="clientName" name="clientName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth <span class="required">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label>Shelter Resident / Drop-in? <span class="required">*</span></label>
+                <select name="shelterStatus" required>
+                    <option value="">Select</option>
+                    <option value="Shelter Resident">Shelter Resident</option>
+                    <option value="Drop-in">Drop-in</option>
+                    <option value="Neither">Neither</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Client Phone <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Client Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <h2>Income / Financial Stability</h2>
+            <p>(If a couple, provide info for each person)</p>
+
+            <div class="form-group">
+                <label for="incomeSources">Source of income (SSDI, SSI, employment, etc.) and monthly income for each source</label>
+                <textarea id="incomeSources" name="incomeSources" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="annualIncomeA">Total Annual Income – Person A <span class="required">*</span></label>
+                <input type="number" id="annualIncomeA" name="annualIncomeA" min="0" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="annualIncomeB">Total Annual Income – Person B (if applicable)</label>
+                <input type="number" id="annualIncomeB" name="annualIncomeB" min="0" step="0.01">
+            </div>
+
+            <h2>Disability</h2>
+
+            <div class="form-group">
+                <label>Does the client(s) have a diagnosed disability? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="disability" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="disability" value="No"> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="disabilityNature">Nature of the disability</label>
+                <textarea id="disabilityNature" name="disabilityNature"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Is the client(s) able to live independently (perform ADLs)? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="independentLiving" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="independentLiving" value="No"> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Is the client(s) currently under care of a medical or mental health professional?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="underCare" value="Yes"> Yes</label>
+                    <label><input type="radio" name="underCare" value="No"> No</label>
+                </div>
+            </div>
+
+            <h2>Homeless Status</h2>
+
+            <div class="form-group">
+                <label>Does the client(s) meet HUD definition of literally homeless? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="hudHomeless" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="hudHomeless" value="No"> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Is the client(s) at risk of becoming homeless? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="atRisk" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="atRisk" value="No"> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="riskExplanation">If yes, please explain</label>
+                <textarea id="riskExplanation" name="riskExplanation"></textarea>
+            </div>
+
+            <h2>Veteran Status</h2>
+
+            <div class="form-group">
+                <label>Is the client(s) a veteran?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="veteranStatus" value="Yes"> Yes</label>
+                    <label><input type="radio" name="veteranStatus" value="No"> No</label>
+                </div>
+            </div>
+
+            <h2>Staff Certification</h2>
+            <p>To the best of my knowledge, the information above is true and accurate.</p>
+
+            <div class="form-group">
+                <label for="staffSignature">Staff Signature <span class="required">*</span></label>
+                <input type="text" id="staffSignature" name="staffSignature" required>
+            </div>
+
+            <div class="form-group">
+                <label for="staffDate">Date <span class="required">*</span></label>
+                <input type="date" id="staffDate" name="staffDate" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Referral</button>
+
+        </form>
+
+        <div class="success-message" id="successMessage">
+            Thank you! Your referral form has been prepared for submission.
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="PSH.html">PSH</a>
+        <a href="RRH.html">RRH</a>
+        <a href="TANF.html">TANF</a>
+        <a href="homearp.html">HomeArp</a>
+        <a href="Success.html">Housing Success Stories</a>
+        <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+ <a href="pointapt.html">Switchpoiont Redhills</a>
+    </div>
+
+    <p>Equal Housing Opportunity • Switchpoint Community Resource Center</p>
+    <p>© 2026 Switchpoint – Design by PattyJamesHDM</p>
+</footer>
+
+<script>
+document.getElementById('pointReferralForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    let data = {};
+    for (let [key, value] of formData.entries()) {
+        data[key] = value;
+    }
+
+    let emailBody = `The Point StG Candidate Referral Form Submission
+
+CLIENT INFORMATION
+Name: ${data.clientName}
+DOB: ${data.dob}
+Shelter Status: ${data.shelterStatus}
+Phone: ${data.phone}
+Email: ${data.email}
+
+INCOME / FINANCIAL STABILITY
+${data.incomeSources}
+Total Annual Income: Person A: ${data.annualIncomeA}, Person B: ${data.annualIncomeB || 'N/A'}
+
+DISABILITY
+Diagnosed Disability: ${data.disability}
+Nature: ${data.disabilityNature || 'N/A'}
+Able to live independently: ${data.independentLiving}
+Under care of medical/mental health professional: ${data.underCare || 'N/A'}
+
+HOMELESS STATUS
+HUD Literally Homeless: ${data.hudHomeless}
+At Risk: ${data.atRisk}
+Risk Explanation: ${data.riskExplanation || 'N/A'}
+
+VETERAN STATUS
+Veteran: ${data.veteranStatus || 'N/A'}
+
+STAFF CERTIFICATION
+Staff Signature: ${data.staffSignature}
+Date: ${data.staffDate}
+
+Submitted: ${new Date().toLocaleString()}
+`.trim();
+
+    const subject = encodeURIComponent(`The Point StG Candidate Referral - ${data.clientName}`);
+    const body = encodeURIComponent(emailBody);
+    window.location.href = `mailto:patty.james@switchpointcrc.org?subject=${subject}&body=${body}`;
+
+    document.getElementById("successMessage").style.display = "block";
+});
+</script>
+
+</body>
+</html>

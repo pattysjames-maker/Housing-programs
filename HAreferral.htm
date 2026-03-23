@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeArp Screening Form</title>
+    <title>HomeARP Rental Assistance Screening</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body> 
-
 
 <nav>
     <a href="index.html">Home</a>
@@ -16,21 +15,22 @@
     <a href="RRH.html">RRH</a>
     <a href="TANF.html">TANF</a>
     <a href="homearp.html">HomeArp</a>
-    <a href="Sucess.html">Housing Success Stories</a>
-    <a href="staffreferral.html"> Agency Staff or Community Member Referral Form</a>
+    <a href="Success.html">Housing Success Stories</a>
+    <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+           <a href="pointapt.html">Switchpoiont Redhills</a>
 </nav>
 
 <div class="container">
     <div class="card">
 
-        <h1>TANF Rental Assistance Screening</h1>
+        <h1>HomeARP Rental Assistance Screening</h1>
 
         <p>
-            Please complete this screening form to determine eligibility for TANF Rental Assistance.  
+            Please complete this screening form to determine eligibility for HomeARP Rental Assistance.  
             Fields marked with <span class="required">*</span> are required.
         </p>
 
-        <form id="tanfForm">
+        <form id="homearpForm">
 
             <h2>Personal Information</h2>
 
@@ -59,22 +59,21 @@
                 <input type="number" id="householdSize" name="householdSize" min="1" required />
             </div>
 
-      
             <h2>Eligibility Questions</h2>
 
             <div class="form-group">
-                <label>Does your household include at least one child under age 18? <span class="required">*</span></label>
+                <label>Are you currently homeless or at risk of homelessness? <span class="required">*</span></label>
                 <div class="radio-group">
-                    <label><input type="radio" name="hasChild" value="Yes" required /> Yes</label>
-                    <label><input type="radio" name="hasChild" value="No" /> No</label>
+                    <label><input type="radio" name="homelessStatus" value="Homeless" required /> Homeless</label>
+                    <label><input type="radio" name="homelessStatus" value="At Risk" /> At Risk</label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Are you currently pregnant in your third trimester?</label>
+                <label>Do you have a history of housing instability? <span class="required">*</span></label>
                 <div class="radio-group">
-                    <label><input type="radio" name="pregnant" value="Yes" /> Yes</label>
-                    <label><input type="radio" name="pregnant" value="No" /> No</label>
+                    <label><input type="radio" name="housingHistory" value="Yes" required /> Yes</label>
+                    <label><input type="radio" name="housingHistory" value="No" /> No</label>
                 </div>
             </div>
 
@@ -86,50 +85,32 @@
             </div>
 
             <div class="form-group">
-                <label>Do you currently receive any of the following benefits?</label>
+                <label>Do you currently receive any benefits or assistance?</label>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="benefits" value="SNAP" /> SNAP (Food Stamps)</label>
-                    <label><input type="checkbox" name="benefits" value="Childcare Assistance" /> Childcare Assistance</label>
                     <label><input type="checkbox" name="benefits" value="Medicaid/CHIP" /> Medicaid or CHIP</label>
-                    <label><input type="checkbox" name="benefits" value="WIC" /> WIC</label>
+                    <label><input type="checkbox" name="benefits" value="Housing Assistance" /> Other Housing Assistance</label>
                     <label><input type="checkbox" name="benefits" value="None" /> None</label>
                 </div>
             </div>
 
-            
             <h2>Housing Need</h2>
 
             <div class="form-group">
-                <label>What type of housing crisis are you experiencing? <span class="required">*</span></label>
+                <label>What housing assistance do you need? <span class="required">*</span></label>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="housingCrisis" value="Eviction Risk" /> At risk of eviction</label>
                     <label><input type="checkbox" name="housingCrisis" value="Past Due Rent" /> Past‑due rent</label>
-                    <label><input type="checkbox" name="housingCrisis" value="Move-In Assistance Needed" /> Need help moving into housing</label>
+                    <label><input type="checkbox" name="housingCrisis" value="Move-In Assistance Needed" /> Assistance to move into housing</label>
                     <label><input type="checkbox" name="housingCrisis" value="Other" /> Other</label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="crisisDetails">Please describe your housing crisis <span class="required">*</span></label>
+                <label for="crisisDetails">Please describe your housing situation <span class="required">*</span></label>
                 <textarea id="crisisDetails" name="crisisDetails" required></textarea>
             </div>
-                
-            <div class="form-group">
-                <label>Are you facing eviction? <span class="required">*</span></label>
-                <div class="radio-group">
-                    <input type="radio" id="evictionYes" name="evictionRisk" value="yes" required>
-                    <label for="evictionYes">Yes</label>
 
-                    <input type="radio" id="evictionNo" name="evictionRisk" value="no">
-                    <label for="evictionNo">No</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="evictionDate">If yes, eviction date:</label>
-                <input type="text" id="evictionDate" name="evictionDate">
-            </div>
-        
             <h2>Resources Used</h2>
 
             <div class="form-group">
@@ -167,7 +148,6 @@
                 </select>
             </div>
 
-           
             <h2>Additional Information</h2>
 
             <div class="form-group">
@@ -175,7 +155,7 @@
                 <textarea id="additionalInfo" name="additionalInfo"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Submit TANF Screening</button>
+            <button type="submit" class="submit-btn">Submit HomeARP Screening</button>
 
         </form>
 
@@ -186,33 +166,31 @@
     </div>
 </div>
 
-
 <footer>
     <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="PSH.html">PSH</a>
-    <a href="RRH.html">RRH</a>
-    <a href="TANF.html">TANF</a>
-    <a href="homearp.html">HomeArp</a>
-    <a href="Sucess.html">Housing Success Stories</a>
-    <a href="staffreferral.html"> Agency Staff or Community Member Referral Form</a>
+        <a href="index.html">Home</a>
+        <a href="PSH.html">PSH</a>
+        <a href="RRH.html">RRH</a>
+        <a href="TANF.html">TANF</a>
+        <a href="homearp.html">HomeArp</a>
+        <a href="Success.html">Housing Success Stories</a>
+        <a href="staffreferral.html">Agency Staff or Community Member Referral Form</a>
+             <a href="pointapt.html">Switchpoiont Redhills</a>
     </div>
-
 
     <p>Equal Housing Opportunity • Switchpoint Community Resource Center</p>
     <p>© 2026 Switchpoint – Design by PattyJamesHDM</p>
 </footer>
 
-
 <script>
-document.getElementById('tanfForm').addEventListener('submit', function (e) {
+document.getElementById('homearpForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const formData = new FormData(this);
     const data = {};
 
     for (let [key, value] of formData.entries()) {
-        if (key === "benefits" || key === "housingCrisis" || key === "resourcesUsed") {
+        if (["benefits", "housingCrisis", "resourcesUsed"].includes(key)) {
             if (!data[key]) data[key] = [];
             data[key].push(value);
         } else {
@@ -225,7 +203,7 @@ document.getElementById('tanfForm').addEventListener('submit', function (e) {
     if (data.resourcesUsed) data.resourcesUsed = data.resourcesUsed.join(", ");
 
     const emailBody = `
-TANF Rental Assistance Screening Submission
+HomeARP Rental Assistance Screening Submission
 
 PERSONAL INFORMATION
 Name: ${data.fullName}
@@ -235,8 +213,8 @@ Address: ${data.address}
 Household Size: ${data.householdSize}
 
 ELIGIBILITY
-Child Under 18: ${data.hasChild}
-Pregnant (3rd Trimester): ${data.pregnant || "No"}
+Homeless/At Risk: ${data.homelessStatus}
+History of Housing Instability: ${data.housingHistory}
 
 INCOME
 Monthly Income: $${data.monthlyIncome}
@@ -244,7 +222,7 @@ Benefits Received: ${data.benefits || "None"}
 
 HOUSING NEED
 Crisis Type: ${data.housingCrisis || "N/A"}
-Crisis Details:
+Details:
 ${data.crisisDetails}
 
 RESOURCES USED
@@ -263,7 +241,7 @@ ${data.additionalInfo || "None"}
 Submitted: ${new Date().toLocaleString()}
 `.trim();
 
-    const subject = encodeURIComponent(`TANF Screening - ${data.fullName}`);
+    const subject = encodeURIComponent(`HomeARP Screening - ${data.fullName}`);
     const body = encodeURIComponent(emailBody);
 
     window.location.href = 
